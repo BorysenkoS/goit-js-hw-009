@@ -1,0 +1,24 @@
+.link {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.link:hover,
+.link:focus {
+  color: rgb(0, 153, 255);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  max-width: 1128px;
+  padding-left: 0;
+  margin: 0 auto;
+}
+.gallery-image {
+  display: block;
+}
