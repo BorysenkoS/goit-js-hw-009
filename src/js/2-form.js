@@ -15,6 +15,7 @@ form.addEventListener('submit', e => {
   const email = dataForm.get('email');
   const message = dataForm.get('message');
   const formData = { email, message };
+
   if (formData.email === '' || formData.message === '') {
     alert('Fill please all fields');
   } else {
@@ -24,6 +25,7 @@ form.addEventListener('submit', e => {
 
     form.reset();
   }
+  console.log(formData);
 });
 function saveToLS(key, value) {
   const jsonData = JSON.stringify(value);
