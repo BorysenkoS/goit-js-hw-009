@@ -1,0 +1,51 @@
+.form-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.feedback-form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-label {
+  display: flex;
+  flex-direction: column;
+}
+.feedback-input-email {
+  outline: none;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.textarea-message {
+  outline: none;
+  margin-bottom: 16px;
+  padding: 8px;
+  height: 80px;
+}
+
+.button {
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #4e75ff;
+}
+
+.button:hover {
+  background: #6c8cff;
+}
