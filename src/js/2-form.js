@@ -6,6 +6,7 @@ form.addEventListener('input', e => {
   const email = dataForm.get('email');
   const message = dataForm.get('message');
   const formData = { email, message };
+
   saveToLS('userData', formData);
 });
 form.addEventListener('submit', e => {
@@ -17,13 +18,13 @@ form.addEventListener('submit', e => {
   const formData = { email, message };
   if (formData.email === '' || formData.message === '') {
     alert('Fill please all fields');
+  } else {
+    form.reset();
+    console.log(formData);
   }
   localStorage.removeItem('email');
   localStorage.removeItem('message');
   localStorage.removeItem('userData');
-
-  form.reset();
-  console.log(formData);
 });
 function saveToLS(key, value) {
   const jsonData = JSON.stringify(value);
