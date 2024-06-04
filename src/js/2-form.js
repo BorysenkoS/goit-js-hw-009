@@ -15,16 +15,14 @@ form.addEventListener('submit', e => {
   const email = dataForm.get('email');
   const message = dataForm.get('message');
   const formData = { email, message };
-
   if (formData.email === '' || formData.message === '') {
     alert('Fill please all fields');
-  } else {
-    localStorage.removeItem('email');
-    localStorage.removeItem('message');
-    localStorage.removeItem('userData');
-
-    form.reset();
   }
+  localStorage.removeItem('email');
+  localStorage.removeItem('message');
+  localStorage.removeItem('userData');
+
+  form.reset();
   console.log(formData);
 });
 function saveToLS(key, value) {
