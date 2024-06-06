@@ -7,7 +7,7 @@ form.addEventListener('input', e => {
   const message = dataForm.get('message');
   const formData = { email, message };
 
-  saveToLS('userData', formData);
+  saveToLS('feedback-form-state', formData);
 });
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -16,7 +16,7 @@ form.addEventListener('submit', e => {
   const email = dataForm.get('email');
   const message = dataForm.get('message');
   const formData = { email, message };
-  if (formData.email === '' || formData.message === '') {
+  if (formData.email.trim() === '' || formData.message.trim() === '') {
     alert('Fill please all fields');
   } else {
     form.reset();
@@ -24,7 +24,7 @@ form.addEventListener('submit', e => {
   }
   localStorage.removeItem('email');
   localStorage.removeItem('message');
-  localStorage.removeItem('userData');
+  localStorage.removeItem('feedback-form-state');
 });
 function saveToLS(key, value) {
   const jsonData = JSON.stringify(value);
@@ -42,7 +42,7 @@ function loadFromLS(key) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const data = loadFromLS('userData');
+  const data = loadFromLS('feedback-form-state');
   form.elements.email.value = data?.email || '';
   form.elements.message.value = data?.message || '';
 });
